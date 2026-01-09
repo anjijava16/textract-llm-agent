@@ -3,6 +3,10 @@ Textract LLM agent system @LLM @agents @Langgraph @AWS Textract @Lambda @DyanmoD
 
 # Application Flow
 
+
+![Alt text](Application_Flow.png)
+
+
 ```
 
 Client
