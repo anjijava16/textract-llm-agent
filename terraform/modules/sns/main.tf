@@ -1,5 +1,5 @@
 resource "aws_sns_topic" "textract" {
-  name = "textract-job-topic"
+  name = var.topic_name
 }
 
 output "topic_arn" {
