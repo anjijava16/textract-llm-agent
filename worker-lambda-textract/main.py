@@ -1,5 +1,5 @@
 def main():
-    print("Hello from woker-lambda-textract!")
+    print("Hello from worker-lambda-textract!")
 
 
 if __name__ == "__main__":

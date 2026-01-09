@@ -7,4 +7,4 @@ requires-python = ">=3.13"
 dependencies = []
 
 [tool.uv.workspace]
-members = ["api-service-textract", "woker-lambda-textract", "agent-service"]
+members = ["api-service-textract", "woker-lambda-textract", "agent-service", "worker-lambda-textract"]

@@ -1,5 +1,5 @@
 [project]
-name = "woker-lambda-textract"
+name = "worker-lambda-textract"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
