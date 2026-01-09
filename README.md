@@ -1,5 +1,10 @@
 # textract-llm-agent
-Textract LLM agent system @LLM @agents @Langgraph @AWS Textract @Lambda @DyanmoDB
+Textract LLM agent system 
+
+1. api-service-textract
+2. worker-lambda-textract
+3. agent-service
+
 
 # Application Flow
 

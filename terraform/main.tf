@@ -1,14 +1,25 @@
-resource "aws_dynamodb_table" "textract_jobs" {
-  name           = "textract_jobs"
-  billing_mode   = "PAY_PER_REQUEST"
-  hash_key       = "job_id"
-
-  attribute {
-    name = "job_id"
-    type = "S"
-  }
-
-  tags = {
-    Project = "TextractPipeline"
-  }
+module "s3" {
+  source = "./modules/s3"
+  project = var.project_name
+  env     = var.environment
 }
+
+module "sns" {
+  source = "./modules/sns"
+}
+
+module "sqs" {
+  source = "./modules/sqs"
+  sns_topic_arn = module.sns.topic_arn
+}
+
+module "dynamodb" {
+  source = "./modules/dynamodb"
+}
+
+module "iam" {
+  source = "./modules/iam"
+  sns_topic_arn     = module.sns.topic_arn
+  upload_bucket_arn = module.s3.upload_bucket
+}
+
